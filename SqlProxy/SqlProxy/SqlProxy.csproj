@@ -41,9 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes.cs" />
+    <Compile Include="EmptyResult.cs" />
     <Compile Include="SqlProxy.cs" />
     <Compile Include="SqlDataMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlProxyCommandType.cs" />
+    <Compile Include="SqlProxyException.cs" />
+    <Compile Include="SqlProxyParameter.cs" />
+    <Compile Include="SqlProxyResult.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

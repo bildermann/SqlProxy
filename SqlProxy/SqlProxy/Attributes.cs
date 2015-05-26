@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SqlProxy {
-    [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
     public class SchemaContextAttribute : Attribute {
         internal string ConnectionStringOrName { get; set; }
         public string Name { get; set; }
@@ -16,10 +16,20 @@ namespace SqlProxy {
 
 
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
-    public class SchemaMethodAttribute : Attribute {
+    public class SchemaStoredProcAttribute : Attribute {
         internal string Name { get; set; }
-        public SchemaMethodAttribute(string name) {
+        public SchemaStoredProcAttribute(string name) {
             Name = name;
         }
+        public SchemaStoredProcAttribute() { }
+    }
+
+    [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
+    public class SchemaFunctionAttribute : Attribute {
+        internal string Name { get; set; }
+        public SchemaFunctionAttribute(string name) {
+            Name = name;
+        }
+        public SchemaFunctionAttribute() { }
     }
 }

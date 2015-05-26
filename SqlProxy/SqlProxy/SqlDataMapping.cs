@@ -76,7 +76,7 @@ namespace SqlProxy {
                 {SqlMappingDataType.varchar, SqlDbType.Variant},
                 {SqlMappingDataType.xml, SqlDbType.Xml}
             };
-        
+
         internal readonly static Dictionary<SqlMappingDataType, Type> TypeMaps =
             new Dictionary<SqlMappingDataType, Type> {
                 {SqlMappingDataType.bigint, typeof(long)},
